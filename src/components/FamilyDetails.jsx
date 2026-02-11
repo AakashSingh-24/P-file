@@ -1,70 +1,34 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { LanguageContext } from '../App';
 
 function FamilyDetails() {
   const [activeTab, setActiveTab] = useState('family');
-
-  const familyInfo = {
-    fatherName: "Mr. Rajesh Sharma",
-    fatherOccupation: "Business Owner",
-    motherName: "Mrs. Sunita Sharma",
-    motherOccupation: "Homemaker",
-    siblings: "1 Brother (Younger, Student)",
-    familyType: "Nuclear Family",
-    familyStatus: "Upper Middle Class"
-  };
-
-  const familyLabels = {
-    fatherName: "Father Name (पिता का नाम)",
-    fatherOccupation: "Father Occupation (पिता का व्यवसाय)",
-    motherName: "Mother Name (माता का नाम)",
-    motherOccupation: "Mother Occupation (माता का व्यवसाय)",
-    siblings: "Siblings (भाई-बहन)",
-    familyType: "Family Type (परिवार का प्रकार)",
-    familyStatus: "Family Status (पारिवारिक स्थिति)"
-  };
-
-  const mamaPakshInfo = {
-    maternalGrandfather: "Late Mr. Vishwanath Patil",
-    maternalGrandmother: "Mrs. Laxmi Patil",
-    maternalUncle: "Mr. Suresh Patil (Business)",
-    nativePlace: "Pune, Maharashtra",
-    familyBackground: "Respectable family with strong values"
-  };
-
-  const mamaLabels = {
-    maternalGrandfather: "Maternal Grandfather (नाना)",
-    maternalGrandmother: "Maternal Grandmother (नानी)",
-    maternalUncle: "Maternal Uncle (मामा)",
-    nativePlace: "Native Place (मूल निवास)",
-    familyBackground: "Family Background (पारिवारिक पृष्ठभूमि)"
-  };
+  const { labels, data } = useContext(LanguageContext);
 
   return (
-    <div className="card">
-      <h2>Family Details (पारिवारिक विवरण)</h2>
-      
+    <div style={{ padding: '30px' }}>
       <div className="sub-navigation">
         <button
           className={`sub-btn ${activeTab === 'family' ? 'active' : ''}`}
           onClick={() => setActiveTab('family')}
         >
-          Family (परिवार)
+          {labels.sectionLabels.familyTab}
         </button>
         <button
           className={`sub-btn ${activeTab === 'mama' ? 'active' : ''}`}
           onClick={() => setActiveTab('mama')}
         >
-          Mama Paksh (मामा पक्ष)
+          {labels.sectionLabels.mamaPakshTab}
         </button>
       </div>
 
       {activeTab === 'family' && (
         <div className="fade-in">
-          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>Family Information (पारिवारिक जानकारी)</h3>
+          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>{labels.sectionLabels.familyInfo}</h3>
           <div className="info-grid">
-            {Object.entries(familyInfo).map(([key, value]) => (
+            {Object.entries(data.familyDetails).map(([key, value]) => (
               <div key={key} className="info-item">
-                <strong>{familyLabels[key]}:</strong>
+                <strong>{labels.familyDetailsLabels[key]}:</strong>
                 <span>{value}</span>
               </div>
             ))}
@@ -74,11 +38,11 @@ function FamilyDetails() {
 
       {activeTab === 'mama' && (
         <div className="fade-in">
-          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>Maternal Side (मामा पक्ष)</h3>
+          <h3 style={{ color: '#667eea', marginBottom: '15px' }}>{labels.sectionLabels.mamaPaksh}</h3>
           <div className="info-grid">
-            {Object.entries(mamaPakshInfo).map(([key, value]) => (
+            {Object.entries(data.mamaPakshDetails).map(([key, value]) => (
               <div key={key} className="info-item">
-                <strong>{mamaLabels[key]}:</strong>
+                <strong>{labels.mamaPakshLabels[key]}:</strong>
                 <span>{value}</span>
               </div>
             ))}

@@ -1,30 +1,13 @@
-function Education() {
-  const educationHistory = [
-    {
-      degree: "Master of Business Administration (MBA)",
-      year: "2018 - 2020",
-      institution: "Indian Institute of Management, Bangalore",
-      details: "Specialization in Finance and Marketing"
-    },
-    {
-      degree: "Bachelor of Engineering (B.E.)",
-      year: "2014 - 2018",
-      institution: "University of Mumbai",
-      details: "Computer Science Engineering - First Class with Distinction"
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      year: "2012 - 2014",
-      institution: "St. Xavier's College, Mumbai",
-      details: "Science Stream - 92%"
-    }
-  ];
+import { useContext } from 'react';
+import { LanguageContext } from '../App';
 
+function Education() {
+  const { data } = useContext(LanguageContext);
+  
   return (
-    <div className="card">
-      <h2>Education (शिक्षा)</h2>
+    <div style={{ padding: '30px' }}>
       <div className="timeline">
-        {educationHistory.map((edu, index) => (
+        {data.educationHistory.map((edu, index) => (
           <div key={index} className="timeline-item">
             <div className="year">{edu.year}</div>
             <h3>{edu.degree}</h3>

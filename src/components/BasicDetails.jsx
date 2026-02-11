@@ -1,25 +1,16 @@
+import { useContext } from 'react';
+import { LanguageContext } from '../App';
+
 function BasicDetails() {
-  const details = {
-    name: "Rahul Sharma",
-    age: "28 years",
-    height: "5'10\"",
-    city: "Mumbai, Maharashtra"
-  };
-
-  const labels = {
-    name: "Name (नाम)",
-    age: "Age (उम्र)",
-    height: "Height (ऊंचाई)",
-    city: "City (शहर)"
-  };
-
+  const { labels, data } = useContext(LanguageContext);
+  
   return (
     <div className="card">
-      <h2>Basic Details (मूल विवरण)</h2>
+      <h2>{labels.sectionLabels.basicDetails}</h2>
       <div className="basic-details-grid">
-        {Object.entries(details).map(([key, value]) => (
+        {Object.entries(data.basicDetails).map(([key, value]) => (
           <div key={key} className="detail-item">
-            <label>{labels[key]}</label>
+            <label>{labels.basicDetailsLabels[key]}</label>
             <span>{value}</span>
           </div>
         ))}

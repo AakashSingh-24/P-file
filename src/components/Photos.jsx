@@ -1,24 +1,21 @@
-function Photos() {
-  // Placeholder photos - will be replaced with real photos later
-  const photos = [
-    { id: 1, icon: "📷" },
-    { id: 2, icon: "🖼️" },
-    { id: 3, icon: "📸" },
-    { id: 4, icon: "🎨" }
-  ];
+import { useContext } from 'react';
+import { LanguageContext } from '../App';
+import { biodataData } from '../data/biodataData';
 
+function Photos() {
+  const { labels } = useContext(LanguageContext);
+  
   return (
-    <div className="card">
-      <h2>Photos (फोटो)</h2>
+    <div style={{ padding: '30px' }}>
       <div className="photos-grid">
-        {photos.map(photo => (
+        {biodataData.photos.map(photo => (
           <div key={photo.id} className="photo-item">
             {photo.icon}
           </div>
         ))}
       </div>
       <p style={{ marginTop: '20px', color: '#666', textAlign: 'center' }}>
-        Photo placeholders - Real photos will be added later (फोटो प्लेसहोल्डर - असली फोटो बाद में जोड़ी जाएंगी)
+        {labels.sectionLabels.photoPlaceholder}
       </p>
     </div>
   );

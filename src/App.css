@@ -60,6 +60,38 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.language-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.language-toggle {
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: white;
+  color: #667eea;
+  border: 3px solid white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.language-toggle:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.accordion-container {
+  margin: 30px 0;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
 /* Card */
 .card {
   background: white;
