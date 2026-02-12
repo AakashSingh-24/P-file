@@ -1,7 +1,7 @@
 export const biodataData = {
   en: {
     basicDetails: {
-      name: "Aakash Singh",
+      name: "Aakash Singh Panwar",
       age: "22 years",
       height: "5'10\"",
       city: "Pipliya Nankar, Madhya Pradesh"
@@ -16,19 +16,19 @@ export const biodataData = {
       bloodGroup: "O-"
     },
 familyDetails: {
-  fatherName: "Ku. Sa. Datar Singh",
+  fatherName: "Ku. Sa. Datar Singh Panwar",
   fatherOccupation: "Farmer",
   motherName: "Subargiya Shreemati Nisha Bai",
-  grandfather: "Th. Sa. Rajkumar Singh",
-  paternalUncle: "Ku. Sa. Bhupendra Singh"
+  grandfather: "Th. Sa. Rajkumar Singh Panwar",
+  paternalUncle: "Ku. Sa. Bhupendra Singh Panwar"
 },
 
 
   mamaPakshDetails: {
-  maternalGrandfather1: "Thakur Sahib Shyam Singh (Retired Teacher)",
+  maternalGrandfather1: "Thakur Sahib Shyam Singh Tomar (Retired Teacher)",
   maternalGrandmother: "Shree Devan Bai",
-  maternalGrandfather2: "Thakur Sahib Gajraj Singh (Retired Teacher)",
-  maternalGrandfather3: "Thakur Sahib Narendra Singh",
+  maternalGrandfather2: "Thakur Sahib Gajraj Singh Tomar (Retired Teacher)",
+  maternalGrandfather3: "Thakur Sahib Narendra Singh Tomar",
   maternalUncle: "Subargiya Surendra Singh",
   nativePlace: "Pipliya Nankar, Tehsil Khategaon, District Dewas"
 },
@@ -78,7 +78,7 @@ educationHistory: [
   },
   hi: {
   basicDetails: {
-  name: "आकाश सिंह",
+  name: "आकाश सिंह पंवार",
   age: "22 वर्ष",
   height: "5'10\"",
   city: "पिपलिया नानकर, मध्य प्रदेश"
@@ -94,19 +94,19 @@ personalDetails: {
 },
 
   familyDetails: {
-  fatherName: "कुं.सा. दातार सिंह",
+  fatherName: "कुं.सा. दातार सिंह पंवार",
   fatherOccupation: "किसान",
   motherName: "सुबर्गिया श्रीमती निशा बाई",
-  grandfather: "ठा.सा. राजकुमार सिंह",
-  paternalUncle: "कुं.सा. भूपेन्द्र सिंह"
+  grandfather: "ठा.सा. राजकुमार सिंह पंवार",
+  paternalUncle: "कुं.सा. भूपेन्द्र सिंह पंवार"
 },
 
    mamaPakshDetails: {
-  maternalGrandfather1: "ठाकुर साहब श्याम सिंह (सेवानिवृत्त शिक्षक)",
+  maternalGrandfather1: "ठाकुर साहब श्याम सिंह तोमर (सेवानिवृत्त शिक्षक)",
   maternalGrandmother: "श्रीमती देवन बाई",
-  maternalGrandfather2: "ठाकुर साहब गजराज सिंह (सेवानिवृत्त शिक्षक)",
-  maternalGrandfather3: "ठाकुर साहब नरेंद्र सिंह",
-  maternalUncle: "सुबर्गिया सुरेन्द्र सिंह",
+  maternalGrandfather2: "ठाकुर साहब गजराज सिंह तोमर (सेवानिवृत्त शिक्षक)",
+  maternalGrandfather3: "ठाकुर साहब नरेंद्र सिंह तोमर",
+  maternalUncle: "सुबर्गिया सुरेन्द्र सिंह तोमर",
   nativePlace: "पिपलिया नानकर, तहसील खातेगांव, जिला देवास"
 },
 
@@ -153,14 +153,15 @@ educationHistory: [
   }
 ],
 
-  },
-  photos: [
-    { id: 1, icon: "📷" },
-    { id: 2, icon: "🖼️" },
-    { id: 3, icon: "📸" },
-    { id: 4, icon: "🎨" }
-  ]
+  }
 };
+
+export const photos = [
+  { id: 1, src: "/src/assets/IMG-20260212-WA0007.jpg" },
+  { id: 2, src: "/src/assets/IMG-20260212-WA0011.jpg" },
+  { id: 3, src: "/src/assets/IMG-20260212-WA0010.jpg" },
+  { id: 4, src: "/src/assets/IMG-20260212-WA0005.jpg" },
+];
 
 export const labels = {
   en: {
