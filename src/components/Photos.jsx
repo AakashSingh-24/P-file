@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { photos } from '../data/biodataData';
+import { photos } from '../data/photos';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Photos() {

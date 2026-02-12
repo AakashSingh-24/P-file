@@ -156,12 +156,7 @@ educationHistory: [
   }
 };
 
-export const photos = [
-  { id: 1, src: "/src/assets/IMG-20260212-WA0007.jpg" },
-  { id: 2, src: "/src/assets/IMG-20260212-WA0011.jpg" },
-  { id: 3, src: "/src/assets/IMG-20260212-WA0010.jpg" },
-  { id: 4, src: "/src/assets/IMG-20260212-WA0005.jpg" },
-];
+
 
 export const labels = {
   en: {
