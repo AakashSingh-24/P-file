@@ -21,7 +21,7 @@ function Photos() {
         <div className="photo-modal" onClick={() => setSelectedPhoto(null)}>
           <div className="photo-modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="photo-modal-close" onClick={() => setSelectedPhoto(null)}>
-              <CloseIcon />
+              <CloseIcon sx={{ color: '#f44336' }} />
             </button>
             <img src={selectedPhoto} alt="Full size" />
           </div>
